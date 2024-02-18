@@ -10,6 +10,10 @@ In this article and this GitHub repository, we present a method to reconstruct t
 
 Despite promising use-cases such as the grasping of deformable objects and visual navigation in a non-rigid environment, Non-Rigid Structure-from-Motion (NRSfM) has had limited applications in robotics due to a lack of accuracy. To remedy this, we propose a new method which boosts the accuracy of NRSfM using sparse surface normals. Surface normal information is available from many sources, including structured lighting, homography decomposition of infinitesimal planes and shape priors. However, these sources are not always available. We thus propose a widely available new source of surface normals: the specularities. Our first technical contribution is a method which detects specular highlights and reconstructs the surface normals from it. It assumes that the light source is approximately localised, which is widely applicable in robotics applications such as endoscopy. Our second technical contribution is an NRSfM method which exploits a sparse surface normal set. For that, we propose a novel convex formulation and a globally optimal solution method.
 
+A descriptive YouTube video is available here:
+
+[<img src="https://github.com/agnivsen/NormalBoostedNRSfM/assets/5153445/7d0a725d-62b2-462a-a51a-289ab0c910d9">](https://www.youtube.com/watch?v=jNhC3noMyEs)
+
 # Dependencies
 
 This code depends on the following external libraries/toolboxes:
