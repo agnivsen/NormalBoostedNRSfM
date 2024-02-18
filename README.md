@@ -14,6 +14,8 @@ A descriptive YouTube video is available here:
 
 [<img src="https://github.com/agnivsen/NormalBoostedNRSfM/assets/5153445/7d0a725d-62b2-462a-a51a-289ab0c910d9">](https://www.youtube.com/watch?v=jNhC3noMyEs)
 
+More details about the paper along with a copy of this code and additional dataset are available at the website of the EnCoV research group: https://encov.ip.uca.fr/ab/code_and_datasets/
+
 # Dependencies
 
 This code depends on the following external libraries/toolboxes:
