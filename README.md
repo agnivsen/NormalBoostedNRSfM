@@ -23,12 +23,41 @@ This code depends on the following external libraries/toolboxes:
  -  [CVX](http://cvxr.com/cvx): the MATLAB software for disciplined convex programming
  -  Developable surface simulator from [Perriollat et al., 2013]
 
+# Data format
+
+All data have been provided in standard NRSfM/SfT format, we explain it below:
+
+Say the data contains _n_ images tracking up to _m_ feature correspondences across images.
+
+The data is a MATLAB _struct_, say **Data**. It contains the following subfields:
+
+* Data.Pgth(i).P is a [3 x _m_] matrix, containing 3D groundtruth points, for all _i_ in [1, _n_]
+
+* Data.p(i).p is a [2 x _m_] or [3 x _m_] matrix, containing tracked point correspondences (image coordinates), for all _i_ in [1, _n_]. If the matrix is of size [3 x _m_], the last row is necessarily all ones
+
+* Data.v is a [_n_ x _m_] matrix which is zero if a point (indexed by column) is invisible at that particular image corresponding to the row number, one otherwise.
+
+
+
 # Scripts
 
 Run the following script:
 
  - **runMe.m:** invokes our proposed NRSfM method with either synthetic data generated using [Perriollat et al., 2013] or the real data introduced in our paper
 
+# Citation
+
+This article has been accepted at the IEEE International Conference of Robotics and Automation (ICRA) 2024. If you find this code and the associated paper useful, you may cite us with:
+```
+@inproceedings{sengupta2024specular,
+  title={Using Specularities to Boost Non-Rigid Structure-from-Motion},
+  author={Sengupta, Agniva and Makki, Karim and Bartoli, Adrien},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2024},
+  organization={IEEE}
+}
+```
+|[EnCoV (PrePrint)](http://encov.ip.uca.fr/publications/pubfiles/2024_Sengupta_etal_ICRA_normal.pdf)|
 
 
 ---
